@@ -1,15 +1,16 @@
-
 services:
   backend:
     build: ./backend
     ports:
       - "8000:8000"
-    environment:
-      - SUPABASE_URL=${SUPABASE_URL}
-      - SUPABASE_KEY=${SUPABASE_KEY}
+    env_file: .env  # Esto carga automáticamente SUPABASE_URL y SUPABASE_KEY
 
   frontend:
-    build: ./frontend
+    build: 
+      context: ./frontend
+      args:
+        - REACT_APP_SUPABASE_URL=${REACT_APP_SUPABASE_URL}
+        - REACT_APP_SUPABASE_ANON_KEY=${REACT_APP_SUPABASE_ANON_KEY}
     ports:
       - "3000:80"
     depends_on:
