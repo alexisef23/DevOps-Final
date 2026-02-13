@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@supabase/supabase-js": "^2.95.3",
+    "lucide-react": "^0.563.0",
+    "react-router-dom": "^7.13.0"
+    "build": "react-scripts build"
+  }
+}
