@@ -77,4 +77,10 @@ DevOps-Final/
 
 -- HU-5 Noticias: Feed informativo de la comunidad.
 
+
+
+## Url
+http://localhost:8000/docs para el backend
+http://localhost:3000/ para el frontend
+
 ```env
